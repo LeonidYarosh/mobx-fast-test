@@ -1,0 +1,15 @@
+.counter {
+    border-radius: 2px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    border-radius: 50%;
+    background: orange;
+    color: #000;
+}
