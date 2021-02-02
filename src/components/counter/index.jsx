@@ -3,17 +3,18 @@ import React from 'react'
 
 import './styles.css'
 import {counterStore} from "./store";
+import {observer} from "mobx-react";
 
 
-export const Counter = () => {
+export const Counter = observer(() => {
 
     return (
         <div className="counter">
-            {`Counter: ${counterStore.count}`}
+            {counterStore.total}
             <div className="btns">
-                <button className="btn">+</button>
-                <button className="btn">-</button>
+                <button className="btn" onClick={() => counterStore.increment()}>+</button>
+                <button className="btn" onClick={() => counterStore.decrement()}>-</button>
             </div>
         </div>
     )
-}
+})
